@@ -32,6 +32,8 @@ body{
     40px 40px;
   color: var(--text-primary);
   line-height: 1.6;
+  padding-top: 70px;
+  box-sizing: border-box;
 }
 
 .transparency-bg {
@@ -264,6 +266,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 50px;
+  box-sizing: border-box;
 }
 
 .hero .container {
@@ -2899,7 +2903,7 @@ p, span, div, h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     min-height: 100vh;
     justify-content: flex-start;
-    padding-top: 100px;
+    padding-top: 80px;
   }
 
   .hero .container .text {
