@@ -1,207 +1,162 @@
 {
   "nav": {
-    "name": "Your Name",
+    "name": "Qian Huang",
     "menu": [
       {
         "text": "Home",
-        "link": "#home"
+        "link": "/"
       },
       {
         "text": "About",
-        "link": "#about"
-      },
-      {
-        "text": "Skills",
-        "link": "#skills"
-      },
-      {
-        "text": "Experience",
-        "link": "#experience"
+        "link": "/about"
       },
       {
         "text": "Projects",
-        "link": "#projects"
-      },
-      {
-        "text": "Contact",
-        "link": "#contact"
+        "link": "/projects"
       }
     ]
   },
   "hero": {
-    "greeting": "Hi",
-    "name": "Your Name",
+    "name": "Qian Huang",
     "title": "Full Stack Developer",
-    "description": "I build exceptional and accessible digital experiences for the web.",
-    "image": "/images/avatar.png",
-    "resume": "https://technical-resume.edgeone.app/"
+    "description": "Data enthusiast with a Master’s degree in Data Science and hands-on experience in logistics, banking, and telecommunication sectors. Looking for a new data opportunity.",
+    "buttons": {
+      "about": {
+        "text": "View About →",
+        "link": "/about"
+      },
+      "projects": {
+        "text": "Know Projects →",
+        "link": "/projects"
+      }
+    }
   },
   "about": {
     "title": "About Me",
-    "description": "Write a detailed description about yourself, your background, and your interests. This section helps visitors get to know you better.",
-    "button": "Download CV",
-    "image": "/images/avatar.png"
-  },
-  "skills": {
-    "title": "My Skills",
-    "categories": [
+    "subtitle": "Data Analyst | Data Scientist | Data Engineer",
+    "intro": {
+      "title": "Who I Am",
+      "description": "I am a data enthusiast, constantly learning new knowledge and exploring industry tools to sharpen my skills. Outside of work, I enjoy solo trips that challenge me to step out of my comfort zone, as well as hiking and beginner-level skiing. Sometimes, I like to slow down with a good book—balancing curiosity for both data and life.."
+    },
+    "highlights": [
       {
-        "title": "Frontend",
-        "skills": [
-          {
-            "name": "HTML",
-            "image": "/images/html.png"
-          },
-          {
-            "name": "CSS",
-            "image": "/images/Css.png"
-          },
-          {
-            "name": "JavaScript",
-            "image": "/images/js.png"
-          },
-          {
-            "name": "React",
-            "image": "/images/react.png"
-          },
-          {
-            "name": "Bootstrap",
-            "image": "/images/bootstrap.jpg"
-          }
-        ]
+        "icon": "🚀",
+        "title": "Fix it Mind",
+        "description": "When facing challenges, I focus on finding solutions rather than placing blame"
       },
       {
-        "title": "Backend",
-        "skills": [
-          {
-            "name": "Node.js",
-            "image": "/images/nodejs.png"
-          },
-          {
-            "name": "Express",
-            "image": "/images/express-js.png"
-          },
-          {
-            "name": "MongoDB",
-            "image": "/images/mongo.png"
-          },
-          {
-            "name": "MySQL",
-            "image": "/images/mysql.png"
-          },
-          {
-            "name": "PostgreSQL",
-            "image": "/images/post.png"
-          }
-        ]
+        "icon": "🎨",
+        "title": "Detail-oriented",
+        "description": "I approach tasks with thoroughness and accuracy, always striving for high standards"
       },
       {
-        "title": "Data Science",
-        "skills": [
-          {
-            "name": "Python",
-            "image": "/images/python.png"
-          },
-          {
-            "name": "TensorFlow",
-            "image": "/images/tensor.png"
-          },
-          {
-            "name": "PyTorch",
-            "image": "/images/deep.png"
-          },
-          {
-            "name": "Scikit-learn",
-            "image": "/images/scikit.png"
-          },
-          {
-            "name": "Pandas",
-            "image": "/images/pandas.png"
-          },
-          {
-            "name": "NumPy",
-            "image": "/images/numpy.png"
-          },
-          {
-            "name": "Matplotlib",
-            "image": "/images/matplot.png"
-          },
-          {
-            "name": "Seaborn",
-            "image": "/images/seaborn.png"
-          }
-        ]
-      },
-      {
-        "title": "Tools",
-        "skills": [
-          {
-            "name": "Git",
-            "image": "/images/git.png"
-          },
-          {
-            "name": "VS Code",
-            "image": "/images/vscode.jpg"
-          },
-          {
-            "name": "Jupyter",
-            "image": "/images/jupyter.png"
-          },
-          {
-            "name": "Figma",
-            "image": "/images/figma.png"
-          },
-          {
-            "name": "Canva",
-            "image": "/images/canva.jpg"
-          }
-        ]
+        "icon": "🔧",
+        "title": "Curious and driven to learn",
+        "description": "I continuously seek new knowledge and tools, applying them in practice to grow and improve"
       }
-    ]
+    ],
+    "skills": {
+      "title": "Technical Skills",
+      "categories": [
+        {
+          "title": "Frontend & Programming",
+          "skills": ["HTML", "Python", "Node.js", "CSS"]
+        },
+        {
+          "title": "Data Engineerng & Cloud",
+          "skills": ["Azure", "Azure DevOps", "DBT", "SQL","Git","CI/CD"]
+        },
+        {
+          "title": "Data Science & Analytics",
+          "skills": ["A/B Testing", "Tensorflow", "Pytorch", "Scikit-Learn","Pandas","Numpy","Matplotlib","Seaborn","Plotly","Power BI"]
+        },
+        {
+          "title": "Tools & DevOps",
+          "skills": ["VS Code", "Jupyter", "Canva"]
+        }
+      ]
+    },
+    "profile": {
+      "name": "Qian Huang",
+      "title": "Data Engineer",
+      "location": "📍 Based in Tilburg, Netherlands",
+      "image": "/images/Qian.jpg"
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "description": "Feel free to reach out to me for any questions or opportunities!",
+      "email": "qian3415t@gmail.com"
+    }
   },
   "experience": {
-    "title": "Experience",
+    "title": "Professional Journey",
     "timeline": [
       {
-        "title": "Job Title",
-        "company": "Company Name",
-        "period": "Duration",
-        "description": "Describe your responsibilities and achievements in this role. Highlight key projects and skills used."
+        "title": "Business Data Analyst",
+        "company": "Berg van Rijk Logistics",
+        "period": "2024.11-2025.06",
+        "description": "Analyzed operational and business data to build dashboards and generate insights that improved decision-making and process efficiency."
       },
       {
-        "title": "Previous Job Title",
-        "company": "Previous Company",
-        "period": "Duration",
-        "description": "Describe your previous role, responsibilities, and achievements. Focus on relevant experience and skills."
+        "title": "Data Scientist Intern",
+        "company": "2Contact",
+        "period": "2023.06-2023.12",
+        "description": "Collected and analyzed customer interaction data to identify patterns and support data-driven improvements in sales and communication strategies."
+      },
+      {
+        "title": "Corporate Account Manager",
+        "company": "China Merchants Bank Co., Ltd.",
+        "period": "2019.11-2022.03",
+        "description": "Managed corporate client portfolios, analyzed financial data, and provided tailored banking solutions while strengthening stakeholder communication and relationship management."
+      },
+      {
+        "title": "Waitress",
+        "company": "Fatty's Cafe",
+        "period": "2016.09-2017.03",
+        "description": "Worked as a part-time barista, preparing coffee, fresh juices, and smoothies, while handling orders, serving guests, and maintaining a clean dining area."
       }
     ]
   },
   "projects": {
-    "title": "Projects",
+    "title": "My Projects",
+    "subtitle": "Welcome to my project portfolio! Here you’ll find a selection of my work across Azure, DBT, Power BI, and Machine Learning. These projects reflect my passion for data — from building scalable pipelines in the cloud, to transforming raw data into reporting-ready models, to creating intuitive dashboards that drive decision-making..",
     "items": [
       {
-        "title": "Project 1",
-        "description": "A brief description of your first project. Explain what it does and what technologies you used.",
-        "technologies": ["List", "Your", "Technologies"],
-        "github": "https://github.com/TencentEdgeOne",
-        "site": "https://github.com/TencentEdgeOne",
-        "image": "/images/project-2-cover.jpg"
+        "title": "Azure Project",
+        "description": "Azure Data Factory: End-to-End Project on Covid 19.",
+        "technologies": ["Azure Data Factory", "Azure DevOps", "Azure Data Lake","Azure Blob Storage","Key Vault"],
+        "github": "https://github.com/QianNetherladns",
+        "site": "https://github.com/QianNetherladns",
+        "image": "/images/project-2-cover.jpg",
+        "showLinks": false
       },
       {
-        "title": "Project 2",
-        "description": "A brief description of your second project. Explain what it does and what technologies you used.",
-        "technologies": ["List", "Your", "Technologies"],
-        "github": "https://github.com/TencentEdgeOne",
-        "site": "https://github.com/TencentEdgeOne",
-        "image": "/images/project-3-cover.png"
+        "title": "DBT Project",
+        "description": "Built an end-to-end analytics workflow in DBT, transforming raw Airbnb sample data into clean, reusable data marts through a layered modeling structure.",
+        "technologies": ["DBT", "SQL", "Data Modeling", "Analytics","Snowflake"],
+        "github": "https://github.com/QianNetherladns",
+        "site": "https://github.com/QianNetherladns",
+        "image": "/images/project-3-cover.png",
+        "showLinks": false
       },
       {
-        "title": "Project 3",
-        "description": "A brief description of your third project. Explain what it does and what technologies you used.",
-        "technologies": ["List", "Your", "Technologies"],
-        "github": "https://github.com/TencentEdgeOne",
-        "site": "https://github.com/TencentEdgeOne",
-        "image": "/images/project-4-cover.jpg"
+        "title": "PowerBI Project",
+        "description": "Interactive dashboards and data visualization for business intelligence.",
+        "technologies": ["Power BI", "Data Visualization", "Dashboard Design", "Business Intelligence"],
+        "github": "https://github.com/QianNetherladns",
+        "site": "https://github.com/QianNetherladns",
+        "image": "/images/project-4-cover.jpg",
+        "showLinks": false
+      },
+      {
+        "title": "Machine Learning Project",
+        "description": "Developed predictive models using machine learning algorithms for sentiment analysis and stance detection.",
+        "technologies": ["Python", "Scikit-learn", "TensorFlow", "Pandas", "NumPy", "Jupyter"],
+        "github": "https://github.com/QianNetherladns",
+        "site": "https://github.com/QianNetherladns",
+        "image": "/images/machine.png",
+        "showLinks": true,
+        "showLiveDemo": false
       }
     ]
   },
@@ -223,22 +178,22 @@
       {
         "name": "GitHub",
         "icon": "github",
-        "link": "https://github.com/TencentEdgeOne"
+        "link": "https://github.com/QianNetherladns"
       },
       {
         "name": "LinkedIn",
         "icon": "linkedin",
-        "link": "https://www.linkedin.com/company/tencentedgeone"
+        "link": "https://www.linkedin.com/in/qian-huang-338106270/"
       },
       {
         "name": "Medium",
         "icon": "medium",
-        "link": "https://medium.com/tencent-cloud/welcome-to-tencent-edgeone-e4eab9100ebc"
+        "link": "https://medium.com/@qian3415"
       },
       {
         "name": "Instagram",
         "icon": "instagram",
-        "link": "https://x.com/TencentCloudEO"
+        "link": "https://www.instagram.com/cyberpink.ss/"
       }
     ],
     "form": {

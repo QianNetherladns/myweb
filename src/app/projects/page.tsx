@@ -1,10 +1,9 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
-import content from '../config/content.json';
+import { useEffect } from 'react';
+import content from '../../config/content.json';
 
-export default function Home() {
+export default function Projects() {
   useEffect(() => {
     // 处理菜单点击
     const handleMenuClick = () => {
@@ -51,7 +50,7 @@ export default function Home() {
                 <li key={index}>
                   <a 
                     href={item.link} 
-                    className={item.link === '/' ? 'nav-active' : ''}
+                    className={item.link === '/projects' ? 'nav-active' : ''}
                   >
                     {item.text}
                   </a>
@@ -62,41 +61,51 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="hero" id="home" style={{ backgroundImage: "url('/images/about.jpg')" }}>
-        <div className="over"></div>
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1 className="hero-title">Hello, I'm <span className="auto-type">{content.hero.name}</span></h1>
-            <p className="hero-description">{content.hero.description}</p>
-            <div className="hero-buttons">
-              <Link href={content.hero.buttons.about.link} className="btn btn-primary">{content.hero.buttons.about.text}</Link>
-              <Link href={content.hero.buttons.projects.link} className="btn btn-secondary">{content.hero.buttons.projects.text}</Link>
+      <section className="projects-page" id="projects" style={{ paddingTop: "100px", minHeight: "100vh" }}>
+        <div className="projects-header">
+          <h1>{content.projects.title}</h1>
+          <p>{content.projects.subtitle}</p>
+        </div>
+        <div className="projects-showcase">
+          {content.projects.items.map((project, index) => (
+            <div key={index} className="project-card">
+              <div className="project-image">
+                <img src={project.image} alt={project.title} />
+                <div className="external-link">
+                  <a href={project.site} target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div className="project-info">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="project-technologies">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span key={techIndex} className="tech-tag">{tech}</span>
+                  ))}
+                </div>
+                {project.showLinks && (
+                  <div className="project-links">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link github-link">
+                      <i className="fab fa-github"></i>
+                      <span>View Code</span>
+                    </a>
+                    {project.showLiveDemo && (
+                      <a href={project.site} target="_blank" rel="noopener noreferrer" className="project-link live-link">
+                        <i className="fas fa-external-link-alt"></i>
+                        <span>Live Demo</span>
+                      </a>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
-            <div className="hero-social">
-              {content.contact.social.map((social, index) => (
-                <a key={index} href={social.link} target="_blank">
-                  <img src={`/images/${social.icon}.svg`} alt={social.name} />
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="hero-visual">
-            <div className="hero-hexagon">
-              {/* 嵌套六边形结构 - 同心圆排列 */}
-              <div className="hexagon-layer hexagon-1"></div>
-              <div className="hexagon-layer hexagon-2"></div>
-              <div className="hexagon-layer hexagon-3"></div>
-              <div className="hexagon-layer hexagon-4"></div>
-              <div className="hexagon-layer hexagon-5"></div>
-              
-              {/* 三条对角线 */}
-              <div className="diagonal-line diagonal-1"></div>
-              <div className="diagonal-line diagonal-2"></div>
-              <div className="diagonal-line diagonal-3"></div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </>
   );
-} 
+}
