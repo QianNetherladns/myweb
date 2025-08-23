@@ -2898,13 +2898,15 @@ p, span, div, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     padding: 20px;
     min-height: 100vh;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 100px;
   }
 
   .hero .container .text {
     padding-right: 0;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     order: 1;
+    margin-top: 0;
   }
 
   .hero .container .text h1 {
@@ -2948,11 +2950,27 @@ p, span, div, h1, h2, h3, h4, h5, h6 {
   body, html {
     overflow-x: hidden;
     overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+
+  /* 修复手机端滚动问题 */
+  .hero-container {
+    padding-top: 80px;
+    min-height: calc(100vh - 80px);
+  }
+
+  /* 确保六边形不会遮挡文字 */
+  .hero-visual {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .hero {
     min-height: 100vh;
-    padding: 20px 0;
+    padding: 0;
     overflow: visible;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 }
