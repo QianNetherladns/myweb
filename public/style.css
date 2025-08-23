@@ -280,6 +280,17 @@ header {
   justify-content: space-between;
 }
 
+.hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
 .hero .container .text {
   flex: 1;
   padding-right: 50px;
@@ -2895,16 +2906,34 @@ p, span, div, h1, h2, h3, h4, h5, h6 {
   color: white !important;
 }
 
-/* 手机端Hero Section修复 */
+  /* 手机端Hero Section修复 */
 @media (max-width: 768px) {
-  .hero .container {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    min-height: 100vh;
-    justify-content: flex-start;
-    padding-top: 80px;
+  /* 强制修复所有内容遮挡问题 */
+  * {
+    box-sizing: border-box;
   }
+
+  /* 确保页面从顶部开始显示 */
+  html, body {
+    scroll-padding-top: 70px;
+  }
+    .hero .container {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      min-height: 100vh;
+      justify-content: flex-start;
+      padding-top: 80px;
+    }
+
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      min-height: 100vh;
+      justify-content: flex-start;
+      padding-top: 80px;
+    }
 
   .hero .container .text {
     padding-right: 0;
@@ -2967,6 +2996,17 @@ p, span, div, h1, h2, h3, h4, h5, h6 {
   .hero-visual {
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+
+  /* 强制修复手机端内容遮挡问题 */
+  .hero-text {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .hero-title {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 
   .hero {
