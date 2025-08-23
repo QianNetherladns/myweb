@@ -154,14 +154,17 @@ header {
   .menu {
       display: none;
       flex-direction: column;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      background-color: white;
-      border: 1px solid #c3bae8;
-      border-radius: 8px;
-      padding: 10px;
-      box-shadow: 0 4px 6px rgba(89, 83, 83, 0.1);
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+      border: none;
+      border-radius: 0;
+      padding: 20px;
+      box-shadow: none;
+      z-index: 1000;
   }
 
   .menu ul {
@@ -2886,4 +2889,70 @@ p, span, div, h1, h2, h3, h4, h5, h6 {
 
 #menu li a.nav-active {
   color: white !important;
+}
+
+/* 手机端Hero Section修复 */
+@media (max-width: 768px) {
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  .hero .container .text {
+    padding-right: 0;
+    margin-bottom: 40px;
+    order: 1;
+  }
+
+  .hero .container .text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .container .text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero .container .text p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hero-social {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 250px;
+    order: 2;
+    margin-top: 20px;
+  }
+
+  /* 修复手机端六边形位置 */
+  .hero-hexagon {
+    position: relative !important;
+    transform: none !important;
+    margin: 20px auto !important;
+  }
+
+  /* 确保页面可以滚动 */
+  body, html {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .hero {
+    min-height: 100vh;
+    padding: 20px 0;
+    overflow: visible;
+  }
 }
