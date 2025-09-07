@@ -70,8 +70,8 @@ export default function Home() {
             <p className="hero-subtitle">{content.hero.title}</p>
             <p className="hero-description">{content.hero.description}</p>
             <div className="hero-buttons">
-              <a href="#projects" className="btn btn-primary">View My Work</a>
-              <a href="#contact" className="btn btn-secondary">Get In Touch</a>
+              <a href={content.hero.buttons.projects.link} className="btn btn-primary">{content.hero.buttons.projects.text}</a>
+              <a href={content.hero.buttons.contact.link} className="btn btn-secondary">{content.hero.buttons.contact.text}</a>
             </div>
             <div className="hero-social">
               {content.contact.social.map((social, index) => (
@@ -102,24 +102,22 @@ export default function Home() {
       {/* About Section */}
       <section className="about-section" id="about">
         <div className="container">
+          <h2 className="section-title">About Me</h2>
+          <p className="section-subtitle">{content.about.intro.description}</p>
+          
           <div className="about-content">
-            <div className="about-text">
-              <h2 className="section-title">About Me</h2>
-              <p className="about-description">{content.about.intro.description}</p>
-              
-              <div className="highlights-grid">
-                {content.about.highlights.map((highlight, index) => (
-                  <div key={index} className="highlight-card">
-                    <div className="highlight-icon">{highlight.icon}</div>
-                    <h4>{highlight.title}</h4>
-                    <p>{highlight.description}</p>
-                  </div>
-                ))}
-              </div>
+            <div className="highlights-grid">
+              {content.about.highlights.map((highlight, index) => (
+                <div key={index} className="highlight-card">
+                  <div className="highlight-icon">{highlight.icon}</div>
+                  <h4>{highlight.title}</h4>
+                  <p>{highlight.description}</p>
+                </div>
+              ))}
             </div>
             
             <div className="skills-section">
-              <h3>Technical Skills</h3>
+              <h3 className="skills-title">Technical Skills</h3>
               <div className="skills-grid">
                 {content.about.skills.categories.map((category, index) => (
                   <div key={index} className="skill-category">

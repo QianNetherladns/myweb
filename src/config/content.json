@@ -17,13 +17,13 @@
     "title": "Full Stack Developer",
     "description": "Data enthusiast with a Master’s degree in Data Science and hands-on experience in logistics, banking, and telecommunication sectors. Looking for a new data opportunity.",
     "buttons": {
-      "about": {
-        "text": "View About →",
-        "link": "/about"
-      },
       "projects": {
-        "text": "Know Projects →",
-        "link": "/projects"
+        "text": "View My Work",
+        "link": "#projects"
+      },
+      "contact": {
+        "text": "Get In Touch",
+        "link": "#contact"
       }
     }
   },
