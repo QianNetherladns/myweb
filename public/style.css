@@ -2317,22 +2317,7 @@ h1 span {
 /* ---------------------------------------------------------------------- */
 /* Projects page CSS starts here */
 
-.projects-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: auto;
-  padding: 30px 0;
-  background: var(--main-bg);
-  background-image: 
-    var(--main-bg),
-    linear-gradient(0deg, rgba(255,255,255,0.05) 0.5px, transparent 0.1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 0.5px, transparent 0.1px);
-  background-size: 
-    cover,
-    40px 40px;
-  font-weight: 400;
-}
+/* REMOVED CONFLICTING .projects-page CSS - now using body.projects-page */
 
 /* Projects header */
 .projects-header {
@@ -3579,28 +3564,30 @@ body.projects-page .cta-content {
   width: 100% !important;
 }
 
-/* Main Page Wrapper - SIMPLIFIED */
-.projects-page-wrapper {
-  min-height: 100vh;
-  background: var(--main-bg);
-  background-image: 
-    var(--main-bg),
-    linear-gradient(0deg, rgba(255,255,255,0.03) 0.5px, transparent 0.1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 0.5px, transparent 0.1px);
-  background-size: cover, 60px 60px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ULTIMATE CENTERING FIX */
+body.projects-page main {
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: block !important;
 }
 
-/* Container System - SIMPLE CENTER */
-.projects-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  width: 100%;
-  box-sizing: border-box;
+body.projects-page section {
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+body.projects-page .projects-hero-content,
+body.projects-page .section-header,
+body.projects-page .projects-grid-container,
+body.projects-page .cta-content {
+  text-align: center !important;
+  margin: 0 auto !important;
+  max-width: 1200px !important;
+  width: 100% !important;
+  display: block !important;
 }
 
 /* Hero Section - SIMPLIFIED */
