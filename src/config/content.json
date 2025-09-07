@@ -118,40 +118,43 @@
     "subtitle": "Welcome to my project portfolio! Here you’ll find a selection of my work across Azure, DBT, Power BI, and Machine Learning. These projects reflect my passion for data — from building scalable pipelines in the cloud, to transforming raw data into reporting-ready models, to creating intuitive dashboards that drive decision-making..",
     "items": [
       {
-        "title": "Azure Project",
-        "description": "Azure Data Factory: End-to-End Project on Covid 19.",
-        "technologies": ["Azure Data Factory", "Azure DevOps", "Azure Data Lake","Azure Blob Storage","Key Vault"],
-        "github": "https://github.com/QianNetherladns",
-        "site": "https://github.com/QianNetherladns",
+        "title": "Azure Data Pipeline",
+        "description": "Built a comprehensive end-to-end data pipeline using Azure Data Factory to process and analyze COVID-19 data. Implemented data ingestion, transformation, and storage solutions with automated monitoring and error handling.",
+        "technologies": ["Azure Data Factory", "Azure DevOps", "Azure Data Lake", "Azure Blob Storage", "Key Vault"],
+        "github": "https://github.com/QianNetherladns/azure-covid-pipeline",
+        "site": "https://github.com/QianNetherladns/azure-covid-pipeline",
         "image": "/images/project-2-cover.jpg",
-        "showLinks": false
+        "showLinks": true,
+        "showLiveDemo": false
       },
       {
-        "title": "DBT Project",
-        "description": "Built an end-to-end analytics workflow in DBT, transforming raw Airbnb sample data into clean, reusable data marts through a layered modeling structure.",
-        "technologies": ["DBT", "SQL", "Data Modeling", "Analytics","Snowflake"],
-        "github": "https://github.com/QianNetherladns",
-        "site": "https://github.com/QianNetherladns",
+        "title": "DBT Analytics Platform",
+        "description": "Developed a robust analytics platform using DBT to transform raw Airbnb data into clean, reusable data marts. Implemented layered modeling architecture with automated testing and documentation.",
+        "technologies": ["DBT", "SQL", "Data Modeling", "Analytics", "Snowflake"],
+        "github": "https://github.com/QianNetherladns/dbt-airbnb-analytics",
+        "site": "https://github.com/QianNetherladns/dbt-airbnb-analytics",
         "image": "/images/project-3-cover.png",
-        "showLinks": false
+        "showLinks": true,
+        "showLiveDemo": false
       },
       {
-        "title": "PowerBI Project",
-        "description": "Interactive dashboards and data visualization for business intelligence.",
+        "title": "Power BI Dashboard",
+        "description": "Created interactive business intelligence dashboards with advanced data visualization techniques. Designed user-friendly interfaces for data exploration and decision-making support.",
         "technologies": ["Power BI", "Data Visualization", "Dashboard Design", "Business Intelligence"],
-        "github": "https://github.com/QianNetherladns",
-        "site": "https://github.com/QianNetherladns",
+        "github": "https://github.com/QianNetherladns/powerbi-dashboards",
+        "site": "https://github.com/QianNetherladns/powerbi-dashboards",
         "image": "/images/project-4-cover.jpg",
-        "showLinks": false,
+        "showLinks": true,
         "video": "https://youtu.be/EA-Phprcvl0",
-        "showVideo": true
+        "showVideo": true,
+        "showLiveDemo": false
       },
       {
-        "title": "Machine Learning Project",
-        "description": "Developed predictive models using machine learning algorithms for sentiment analysis and stance detection.",
+        "title": "ML Sentiment Analysis",
+        "description": "Developed machine learning models for sentiment analysis and stance detection using advanced NLP techniques. Implemented data preprocessing, feature engineering, and model evaluation pipelines.",
         "technologies": ["Python", "Scikit-learn", "TensorFlow", "Pandas", "NumPy", "Jupyter"],
-        "github": "https://github.com/QianNetherladns",
-        "site": "https://github.com/QianNetherladns",
+        "github": "https://github.com/QianNetherladns/ml-sentiment-analysis",
+        "site": "https://github.com/QianNetherladns/ml-sentiment-analysis",
         "image": "/images/machine.png",
         "showLinks": true,
         "showLiveDemo": false
