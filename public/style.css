@@ -1289,12 +1289,12 @@ header {
   100% { opacity: 1; }
 }
 
-/* RESTORED PROJECT CARD STYLES - CLEAN DESIGN */
+/* PROJECT CARD STYLES - REFERENCE DESIGN */
 body.projects-page .project-card {
   background: #ffffff !important;
-  border-radius: 8px !important;
+  border-radius: 12px !important;
   overflow: hidden !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
   transition: all 0.3s ease !important;
   border: 1px solid #e9ecef !important;
   position: relative !important;
@@ -1304,8 +1304,8 @@ body.projects-page .project-card {
 }
 
 body.projects-page .project-card:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
   border-color: #007bff !important;
 }
 
@@ -1449,6 +1449,25 @@ body.projects-page .projects-showcase-section {
     gap: 1.5rem !important;
     padding: 0 1rem !important;
   }
+}
+
+/* REFERENCE DESIGN TECH TAGS */
+body.projects-page .tech-tag {
+  background: #e3f2fd !important;
+  color: #1976d2 !important;
+  padding: 0.4rem 0.8rem !important;
+  border-radius: 20px !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  border: 1px solid #bbdefb !important;
+  transition: all 0.3s ease !important;
+}
+
+body.projects-page .tech-tag:hover {
+  background: #1976d2 !important;
+  color: white !important;
+  border-color: #1976d2 !important;
+  transform: translateY(-2px) !important;
 }
 
 .over{
@@ -3934,10 +3953,10 @@ body.projects-page .cta-content {
   letter-spacing: 0.05em;
 }
 
-/* Projects Showcase Section - EXACTLY LIKE IMAGE */
+/* Projects Showcase Section - REFERENCE DESIGN */
 .projects-showcase-section {
   padding: 6rem 0;
-  background: #f8f9fa;
+  background: #ffffff;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -3947,6 +3966,9 @@ body.projects-page .cta-content {
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-title {
@@ -3957,13 +3979,12 @@ body.projects-page .cta-content {
   text-align: center;
 }
 
-.section-subtitle {
+.section-description {
   font-size: 1.1rem;
   color: #6c757d;
-  max-width: 800px;
-  margin: 0 auto;
   line-height: 1.6;
   text-align: center;
+  margin: 0;
 }
 
 /* Removed duplicate .projects-grid-container rules - using body.projects-page specific rules instead */

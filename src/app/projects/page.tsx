@@ -94,9 +94,13 @@ export default function Projects() {
           </div>
         </section>
 
-        {/* Projects Showcase - CLEAN DESIGN */}
+        {/* Projects Showcase - REFERENCE DESIGN */}
         <section className="projects-showcase-section">
           <div className="projects-container">
+            <div className="section-header">
+              <h2 className="section-title">Our Projects</h2>
+              <p className="section-description">Here you can showcase your best work. Each project should include a brief description, the technologies used, and any notable achievements. This helps potential clients or employers understand your capabilities.</p>
+            </div>
             <div className="projects-grid-container">
               {content.projects.items.map((project, index) => (
                 <article key={index} className="project-card">
