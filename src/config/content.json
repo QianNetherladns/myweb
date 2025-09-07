@@ -146,7 +146,9 @@
         "github": "https://github.com/QianNetherladns",
         "site": "https://github.com/QianNetherladns",
         "image": "/images/project-4-cover.jpg",
-        "showLinks": false
+        "showLinks": false,
+        "video": "https://youtu.be/EA-Phprcvl0",
+        "showVideo": true
       },
       {
         "title": "Machine Learning Project",

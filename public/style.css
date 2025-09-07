@@ -2015,6 +2015,18 @@ h1 span {
   transform: translateY(-2px);
 }
 
+.video-link {
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+  color: white;
+  border: 1px solid #ff0000;
+}
+
+.video-link:hover {
+  background: linear-gradient(135deg, #e60000 0%, #b30000 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .projects-header h1 {

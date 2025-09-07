@@ -87,16 +87,26 @@ export default function Projects() {
                     <span key={techIndex} className="tech-tag">{tech}</span>
                   ))}
                 </div>
-                {project.showLinks && (
+                {(project.showLinks || project.showVideo) && (
                   <div className="project-links">
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link github-link">
-                      <i className="fab fa-github"></i>
-                      <span>View Code</span>
-                    </a>
-                    {project.showLiveDemo && (
-                      <a href={project.site} target="_blank" rel="noopener noreferrer" className="project-link live-link">
-                        <i className="fas fa-external-link-alt"></i>
-                        <span>Live Demo</span>
+                    {project.showLinks && (
+                      <>
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link github-link">
+                          <i className="fab fa-github"></i>
+                          <span>View Code</span>
+                        </a>
+                        {project.showLiveDemo && (
+                          <a href={project.site} target="_blank" rel="noopener noreferrer" className="project-link live-link">
+                            <i className="fas fa-external-link-alt"></i>
+                            <span>Live Demo</span>
+                          </a>
+                        )}
+                      </>
+                    )}
+                    {project.showVideo && (
+                      <a href={project.video} target="_blank" rel="noopener noreferrer" className="project-link video-link">
+                        <i className="fab fa-youtube"></i>
+                        <span>Watch Video</span>
                       </a>
                     )}
                   </div>
