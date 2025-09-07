@@ -69,9 +69,6 @@ export default function Home() {
             <h1 className="hero-title">Hello, I'm <span className="auto-type">{content.hero.name}</span></h1>
             <p className="hero-subtitle">{content.hero.title}</p>
             <p className="hero-description">{content.hero.description}</p>
-            <div className="hero-buttons">
-              <a href="/projects" className="btn btn-primary">{content.hero.buttons.projects.text}</a>
-            </div>
             <div className="hero-info">
               <div className="base-info">
                 <span className="base-text">📍 Based in Tilburg, Netherlands</span>
@@ -108,34 +105,6 @@ export default function Home() {
 
 
 
-      {/* Contact Section */}
-      <section className="contact-section" id="contact">
-        <div className="container">
-          <h2 className="section-title">Contact Me</h2>
-          <p className="section-subtitle">{content.contact.description}</p>
-          
-          <div className="contact-content">
-            <div className="contact-info">
-              <div className="contact-item">
-                <div className="contact-icon">📧</div>
-                <div className="contact-details">
-                  <h4>Email</h4>
-                  <a href={`mailto:${content.contact.info.email}`}>{content.contact.info.email}</a>
-                </div>
-              </div>
-              
-              <div className="contact-item">
-                <div className="contact-icon">📍</div>
-                <div className="contact-details">
-                  <h4>Location</h4>
-                  <p>{content.contact.info.location}</p>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 } 
