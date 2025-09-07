@@ -67,49 +67,48 @@ export default function Projects() {
 
       {/* Main Content Wrapper */}
       <main className="projects-page-wrapper" style={{ paddingTop: "80px" }}>
-        {/* Hero Section */}
-        <section className="projects-hero-section">
-          <div className="projects-container">
-            <div className="projects-hero-content">
-              <div className="hero-badge">
-                <span className="badge-text">Portfolio</span>
-              </div>
-              <h1 className="projects-hero-title">My Projects</h1>
-              <p className="projects-hero-subtitle">{content.projects.subtitle}</p>
-              <div className="hero-stats">
-                <div className="stat-item">
-                  <span className="stat-number">{content.projects.items.length}</span>
-                  <span className="stat-label">Projects</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">4</span>
-                  <span className="stat-label">Technologies</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">2+</span>
-                  <span className="stat-label">Years</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Projects Showcase - REFERENCE DESIGN */}
+        {/* Projects Showcase - EXACTLY LIKE IMAGE */}
         <section className="projects-showcase-section">
           <div className="projects-container">
             <div className="section-header">
-              <h2 className="section-title">Our Projects</h2>
-              <p className="section-description">Here you can showcase your best work. Each project should include a brief description, the technologies used, and any notable achievements. This helps potential clients or employers understand your capabilities.</p>
+              <h2 className="section-title">This helps potential clients or employers understand your capabilities.</h2>
             </div>
+            
             <div className="projects-grid-container">
               {content.projects.items.map((project, index) => (
                 <article key={index} className="project-card">
                   <div className="project-image-container">
                     <img src={project.image} alt={project.title} className="project-image" />
+                    <div className="project-overlay">
+                      <div className="overlay-content">
+                        <div className="project-category">
+                          <span className="category-tag">Data Project</span>
+                        </div>
+                        <div className="project-link">
+                          {project.showLinks && (
+                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-action-btn">
+                              <i className="fas fa-code"></i>
+                            </a>
+                          )}
+                          {project.showVideo && (
+                            <a href={project.video} target="_blank" rel="noopener noreferrer" className="project-action-btn">
+                              <i className="fas fa-play"></i>
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   
                   <div className="project-content">
-                    <h3 className="project-title">{project.title}</h3>
+                    <div className="project-header">
+                      <h3 className="project-title">{project.title}</h3>
+                      <div className="project-status">
+                        <div className="status-indicator"></div>
+                        <span className="status-text">Completed</span>
+                      </div>
+                    </div>
+                    
                     <p className="project-description">{project.description}</p>
                     
                     <div className="project-technologies">
@@ -117,40 +116,9 @@ export default function Projects() {
                         <span key={techIndex} className="tech-tag">{tech}</span>
                       ))}
                     </div>
-                    
-                    {(project.showLinks || project.showVideo) && (
-                      <div className="project-actions">
-                        {project.showLinks && (
-                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="action-button github-button">
-                            <i className="fab fa-github"></i>
-                            <span>View Code</span>
-                          </a>
-                        )}
-                        {project.showVideo && (
-                          <a href={project.video} target="_blank" rel="noopener noreferrer" className="action-button video-button">
-                            <i className="fab fa-youtube"></i>
-                            <span>Watch Demo</span>
-                          </a>
-                        )}
-                      </div>
-                    )}
                   </div>
                 </article>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action Section */}
-        <section className="projects-cta-section">
-          <div className="projects-container">
-            <div className="cta-content">
-              <h2 className="cta-title">Interested in Working Together?</h2>
-              <p className="cta-subtitle">Let's discuss your next project and how I can help bring your ideas to life.</p>
-              <div className="cta-actions">
-                <a href="mailto:qian3415@gmail.com" className="cta-button primary">Get In Touch</a>
-                <a href="/" className="cta-button secondary">View Homepage</a>
-              </div>
             </div>
           </div>
         </section>

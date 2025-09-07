@@ -1289,12 +1289,12 @@ header {
   100% { opacity: 1; }
 }
 
-/* PROJECT CARD STYLES - REFERENCE DESIGN */
+/* PROJECT CARD STYLES - EXACTLY LIKE IMAGE */
 body.projects-page .project-card {
   background: #ffffff !important;
-  border-radius: 12px !important;
+  border-radius: 8px !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
   transition: all 0.3s ease !important;
   border: 1px solid #e9ecef !important;
   position: relative !important;
@@ -1304,8 +1304,8 @@ body.projects-page .project-card {
 }
 
 body.projects-page .project-card:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   border-color: #007bff !important;
 }
 
@@ -1451,22 +1451,21 @@ body.projects-page .projects-showcase-section {
   }
 }
 
-/* REFERENCE DESIGN TECH TAGS */
+/* EXACTLY LIKE IMAGE TECH TAGS */
 body.projects-page .tech-tag {
-  background: #e3f2fd !important;
-  color: #1976d2 !important;
-  padding: 0.4rem 0.8rem !important;
-  border-radius: 20px !important;
-  font-size: 0.8rem !important;
+  background: #f8f9fa !important;
+  color: #495057 !important;
+  padding: 0.3rem 0.6rem !important;
+  border-radius: 4px !important;
+  font-size: 0.75rem !important;
   font-weight: 500 !important;
-  border: 1px solid #bbdefb !important;
+  border: 1px solid #e9ecef !important;
   transition: all 0.3s ease !important;
 }
 
 body.projects-page .tech-tag:hover {
-  background: #1976d2 !important;
-  color: white !important;
-  border-color: #1976d2 !important;
+  background: rgba(59, 130, 246, 0.2) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
   transform: translateY(-2px) !important;
 }
 
@@ -3953,10 +3952,10 @@ body.projects-page .cta-content {
   letter-spacing: 0.05em;
 }
 
-/* Projects Showcase Section - REFERENCE DESIGN */
+/* Projects Showcase Section - EXACTLY LIKE IMAGE */
 .projects-showcase-section {
   padding: 6rem 0;
-  background: #ffffff;
+  background: #f8f9fa;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -3972,19 +3971,12 @@ body.projects-page .cta-content {
 }
 
 .section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #212529;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.section-description {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
   color: #6c757d;
-  line-height: 1.6;
+  margin-bottom: 0;
   text-align: center;
-  margin: 0;
+  line-height: 1.6;
 }
 
 /* Removed duplicate .projects-grid-container rules - using body.projects-page specific rules instead */
