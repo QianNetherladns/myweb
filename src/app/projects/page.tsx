@@ -94,12 +94,12 @@ export default function Projects() {
           </div>
         </section>
 
-        {/* Projects Showcase */}
+        {/* Projects Showcase - Like Reference Site */}
         <section className="projects-showcase-section">
           <div className="projects-container">
             <div className="section-header">
-              <h2 className="section-title">Featured Work</h2>
-              <p className="section-subtitle">Explore my latest projects and technical implementations</p>
+              <h2 className="section-title">Our Projects</h2>
+              <p className="section-subtitle">Here you can showcase your best work. Each project should include a brief description, the technologies used, and any notable achievements. This helps potential clients or employers understand your capabilities.</p>
             </div>
             
             <div className="projects-grid-container">
@@ -119,20 +119,22 @@ export default function Projects() {
                       ))}
                     </div>
                     
-                    <div className="project-actions">
-                      {project.showLinks && (
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="action-button github-button">
-                          <i className="fab fa-github"></i>
-                          <span>Code</span>
-                        </a>
-                      )}
-                      {project.showVideo && (
-                        <a href={project.video} target="_blank" rel="noopener noreferrer" className="action-button video-button">
-                          <i className="fab fa-youtube"></i>
-                          <span>Demo</span>
-                        </a>
-                      )}
-                    </div>
+                    {(project.showLinks || project.showVideo) && (
+                      <div className="project-actions">
+                        {project.showLinks && (
+                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="action-button github-button">
+                            <i className="fab fa-github"></i>
+                            <span>View Code</span>
+                          </a>
+                        )}
+                        {project.showVideo && (
+                          <a href={project.video} target="_blank" rel="noopener noreferrer" className="action-button video-button">
+                            <i className="fab fa-youtube"></i>
+                            <span>Watch Demo</span>
+                          </a>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </article>
               ))}

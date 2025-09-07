@@ -3641,9 +3641,9 @@ body.projects-page .cta-content {
   letter-spacing: 0.05em;
 }
 
-/* Projects Showcase Section - CARD LAYOUT LIKE IMAGE */
+/* Projects Showcase Section - LIKE REFERENCE SITE */
 .projects-showcase-section {
-  padding: 4rem 0;
+  padding: 6rem 0;
   background: var(--main-bg);
   width: 100%;
   display: flex;
@@ -3659,29 +3659,18 @@ body.projects-page .cta-content {
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -0.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-  border-radius: 2px;
+  color: #212529;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .section-subtitle {
   font-size: 1.1rem;
-  color: var(--text-secondary);
-  max-width: 600px;
+  color: #6c757d;
+  max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
+  text-align: center;
 }
 
 .projects-grid-container {
