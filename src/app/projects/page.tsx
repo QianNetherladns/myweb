@@ -14,14 +14,18 @@ export default function Projects() {
     // 添加事件监听器
     document.querySelector('.menu-toggle')?.addEventListener('click', handleMenuClick);
 
+    // Add/remove projects-page class to body
+    document.body.classList.add('projects-page');
+
     // 清理函数
     return () => {
       document.querySelector('.menu-toggle')?.removeEventListener('click', handleMenuClick);
+      document.body.classList.remove('projects-page');
     };
   }, []);
 
   return (
-    <div className="projects-page">
+    <>
       <head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -172,6 +176,6 @@ export default function Projects() {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 }
