@@ -3829,7 +3829,6 @@ body.projects-page section {
 
 body.projects-page .projects-hero-content,
 body.projects-page .section-header,
-body.projects-page .projects-grid-container,
 body.projects-page .cta-content {
   text-align: center !important;
   margin: 0 auto !important;
@@ -3967,30 +3966,7 @@ body.projects-page .cta-content {
   text-align: center;
 }
 
-.projects-grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin: 2rem auto 0 auto;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 2rem;
-}
-
-@media (max-width: 1024px) {
-  .projects-grid-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects-grid-container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
-}
+/* Removed duplicate .projects-grid-container rules - using body.projects-page specific rules instead */
 
 /* Project Card - EXACTLY LIKE IMAGE - FORCE OVERRIDE */
 body.projects-page .project-card,
@@ -4311,10 +4287,7 @@ body.projects-page .project-title,
     gap: 2rem;
   }
   
-  .projects-grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-  }
+  /* Removed conflicting grid rule - using 2x2 layout instead */
 }
 
 @media (max-width: 768px) {
@@ -4351,10 +4324,7 @@ body.projects-page .project-title,
     font-size: 2rem;
   }
   
-  .projects-grid-container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
+  /* Removed conflicting grid rule - using 2x2 layout instead */
   
   .project-content {
     padding: 1.5rem;
