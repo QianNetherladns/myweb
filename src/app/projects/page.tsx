@@ -86,8 +86,8 @@ export default function Projects() {
                   <span className="stat-label">Technologies</span>
                 </div>
                 <div className="stat-item">
-                  <span className="stat-number">100%</span>
-                  <span className="stat-label">Quality</span>
+                  <span className="stat-number">2+</span>
+                  <span className="stat-label">Years</span>
                 </div>
               </div>
             </div>
@@ -98,8 +98,7 @@ export default function Projects() {
         <section className="projects-showcase-section">
           <div className="projects-container">
             <div className="section-header">
-              <h2 className="section-title">Our Projects</h2>
-              <p className="section-subtitle">Here you can showcase your best work. Each project should include a brief description, the technologies used, and any notable achievements. This helps potential clients or employers understand your capabilities.</p>
+              <h2 className="section-title">My Projects</h2>
             </div>
             
             <div className="projects-grid-container">
@@ -148,10 +147,10 @@ export default function Projects() {
             <div className="cta-content">
               <h2 className="cta-title">Interested in Working Together?</h2>
               <p className="cta-subtitle">Let's discuss your next project and how I can help bring your ideas to life.</p>
-              <div className="cta-actions">
-                <a href="#contact" className="cta-button primary">Get In Touch</a>
-                <a href="/" className="cta-button secondary">View Homepage</a>
-              </div>
+                    <div className="cta-actions">
+                      <a href="mailto:qian3415@gmail.com" className="cta-button primary">Get In Touch</a>
+                      <a href="/" className="cta-button secondary">View Homepage</a>
+                    </div>
             </div>
           </div>
         </section>
