@@ -69,9 +69,6 @@ export default function Home() {
             <p className="hero-subtitle">{content.hero.title}</p>
             <p className="hero-description">{content.hero.description}</p>
             <div className="hero-info">
-              <div className="base-info">
-                <span className="base-text">📍 Based in Tilburg, Netherlands</span>
-              </div>
               <div className="follow-me">
                 <span className="follow-text">Follow Me</span>
                 <div className="hero-social">

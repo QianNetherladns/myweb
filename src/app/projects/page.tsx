@@ -52,8 +52,8 @@ export default function Projects() {
             <ul>
               {content.nav.menu.map((item, index) => (
                 <li key={index}>
-                  <a 
-                    href={item.link} 
+                  <a
+                    href={item.link}
                     className={item.link === '/projects' ? 'nav-active' : ''}
                   >
                     {item.text}
@@ -94,7 +94,7 @@ export default function Projects() {
           </div>
         </section>
 
-        {/* Projects Showcase - Like Reference Site */}
+        {/* Projects Showcase - EXACTLY LIKE IMAGE */}
         <section className="projects-showcase-section">
           <div className="projects-container">
             <div className="section-header">
@@ -106,10 +106,36 @@ export default function Projects() {
                 <article key={index} className="project-card">
                   <div className="project-image-container">
                     <img src={project.image} alt={project.title} className="project-image" />
+                    <div className="project-overlay">
+                      <div className="overlay-content">
+                        <div className="project-category">
+                          <span className="category-tag">Data Project</span>
+                        </div>
+                        <div className="project-link">
+                          {project.showLinks && (
+                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-action-btn">
+                              <i className="fas fa-code"></i>
+                            </a>
+                          )}
+                          {project.showVideo && (
+                            <a href={project.video} target="_blank" rel="noopener noreferrer" className="project-action-btn">
+                              <i className="fas fa-play"></i>
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   
                   <div className="project-content">
-                    <h3 className="project-title">{project.title}</h3>
+                    <div className="project-header">
+                      <h3 className="project-title">{project.title}</h3>
+                      <div className="project-status">
+                        <div className="status-indicator"></div>
+                        <span className="status-text">Completed</span>
+                      </div>
+                    </div>
+                    
                     <p className="project-description">{project.description}</p>
                     
                     <div className="project-technologies">
@@ -117,23 +143,6 @@ export default function Projects() {
                         <span key={techIndex} className="tech-tag">{tech}</span>
                       ))}
                     </div>
-                    
-                    {(project.showLinks || project.showVideo) && (
-                      <div className="project-actions">
-                        {project.showLinks && (
-                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="action-button github-button">
-                            <i className="fab fa-github"></i>
-                            <span>View Code</span>
-                          </a>
-                        )}
-                        {project.showVideo && (
-                          <a href={project.video} target="_blank" rel="noopener noreferrer" className="action-button video-button">
-                            <i className="fab fa-youtube"></i>
-                            <span>Watch Demo</span>
-                          </a>
-                        )}
-                      </div>
-                    )}
                   </div>
                 </article>
               ))}
@@ -147,10 +156,10 @@ export default function Projects() {
             <div className="cta-content">
               <h2 className="cta-title">Interested in Working Together?</h2>
               <p className="cta-subtitle">Let's discuss your next project and how I can help bring your ideas to life.</p>
-                    <div className="cta-actions">
-                      <a href="mailto:qian3415@gmail.com" className="cta-button primary">Get In Touch</a>
-                      <a href="/" className="cta-button secondary">View Homepage</a>
-                    </div>
+              <div className="cta-actions">
+                <a href="mailto:qian3415@gmail.com" className="cta-button primary">Get In Touch</a>
+                <a href="/" className="cta-button secondary">View Homepage</a>
+              </div>
             </div>
           </div>
         </section>
