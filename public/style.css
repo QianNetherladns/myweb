@@ -1838,7 +1838,7 @@ header {
   .experience-timeline {
     padding: 20px;
   }
-  
+
   .intro-content h2,
   .skills-showcase h2,
   .experience-timeline h2 {
@@ -3544,6 +3544,16 @@ p, span, div, h1, h2, h3, h4, h5, h6 {
    PROFESSIONAL PROJECTS PAGE LAYOUT
    ======================================== */
 
+/* Projects Page Body Override */
+.projects-page {
+  padding-top: 0 !important;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--main-bg);
+}
+
 /* Main Page Wrapper */
 .projects-page-wrapper {
   min-height: 100vh;
@@ -3553,6 +3563,10 @@ p, span, div, h1, h2, h3, h4, h5, h6 {
     linear-gradient(0deg, rgba(255,255,255,0.03) 0.5px, transparent 0.1px),
     linear-gradient(90deg, rgba(255,255,255,0.03) 0.5px, transparent 0.1px);
   background-size: cover, 60px 60px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Container System */
@@ -3560,6 +3574,8 @@ p, span, div, h1, h2, h3, h4, h5, h6 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Hero Section */

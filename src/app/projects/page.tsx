@@ -21,7 +21,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <>
+    <div className="projects-page">
       <head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -62,7 +62,7 @@ export default function Projects() {
       </header>
 
       {/* Main Content Wrapper */}
-      <main className="projects-page-wrapper">
+      <main className="projects-page-wrapper" style={{ paddingTop: "80px" }}>
         {/* Hero Section */}
         <section className="projects-hero-section">
           <div className="projects-container">
@@ -172,6 +172,6 @@ export default function Projects() {
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 }
