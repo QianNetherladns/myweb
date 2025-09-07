@@ -1289,12 +1289,12 @@ header {
   100% { opacity: 1; }
 }
 
-/* NEW PROJECT CARD STYLES - EXACTLY LIKE IMAGE */
+/* RESTORED PROJECT CARD STYLES - CLEAN DESIGN */
 body.projects-page .project-card {
   background: #ffffff !important;
-  border-radius: 12px !important;
+  border-radius: 8px !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
   transition: all 0.3s ease !important;
   border: 1px solid #e9ecef !important;
   position: relative !important;
@@ -1304,63 +1304,125 @@ body.projects-page .project-card {
 }
 
 body.projects-page .project-card:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   border-color: #007bff !important;
 }
 
 body.projects-page .project-image-container {
   position: relative !important;
-  height: 200px !important;
+  height: 180px !important;
   overflow: hidden !important;
   background: #f8f9fa !important;
 }
 
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
 body.projects-page .project-content {
-  padding: 1.5rem !important;
+  padding: 1.25rem !important;
   flex: 1 !important;
   display: flex !important;
   flex-direction: column !important;
 }
 
 body.projects-page .project-title {
-  font-size: 1.25rem !important;
+  font-size: 1.1rem !important;
   font-weight: 600 !important;
   color: #212529 !important;
   margin: 0 0 0.75rem 0 !important;
   line-height: 1.3 !important;
 }
 
-body.projects-page .project-description {
-  color: #6c757d !important;
-  line-height: 1.5 !important;
-  margin-bottom: 1.25rem !important;
-  font-size: 0.95rem !important;
-  flex: 1 !important;
+.project-description {
+  color: #6c757d;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  flex: 1;
 }
 
-body.projects-page .tech-tag {
-  background: #e3f2fd !important;
-  color: #1976d2 !important;
-  padding: 0.4rem 0.8rem !important;
-  border-radius: 20px !important;
-  font-size: 0.8rem !important;
-  font-weight: 500 !important;
-  border: 1px solid #bbdefb !important;
-  transition: all 0.3s ease !important;
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
 }
 
-body.projects-page .tech-tag:hover {
-  background: #1976d2 !important;
-  color: white !important;
-  border-color: #1976d2 !important;
-  transform: translateY(-2px) !important;
+.tech-tag {
+  background: #f8f9fa;
+  color: #495057;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
 }
 
-/* Projects Grid - 2x2 Layout */
+.tech-tag:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.project-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.github-button {
+  background: #6c757d;
+  color: white;
+  border-color: #6c757d;
+}
+
+.github-button:hover {
+  background: #5a6268;
+  border-color: #5a6268;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+.video-button {
+  background: #dc3545;
+  color: white;
+  border-color: #dc3545;
+}
+
+.video-button:hover {
+  background: #c82333;
+  border-color: #c82333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+/* Projects Grid - 3 COLUMN LAYOUT */
 body.projects-page .projects-grid-container {
   display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-columns: repeat(3, 1fr) !important;
   gap: 2rem !important;
   margin: 2rem auto 0 auto !important;
   width: 100% !important;
@@ -1370,8 +1432,15 @@ body.projects-page .projects-grid-container {
 
 /* Projects Showcase Background */
 body.projects-page .projects-showcase-section {
-  background: #f8f9fa !important;
+  background: var(--main-bg) !important;
   padding: 6rem 0 !important;
+}
+
+@media (max-width: 1024px) {
+  body.projects-page .projects-grid-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
 }
 
 @media (max-width: 768px) {
