@@ -99,41 +99,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="about-section" id="about">
-        <div className="container">
-          <h2 className="section-title">About Me</h2>
-          <p className="section-subtitle">{content.about.intro.description}</p>
-          
-          <div className="about-content">
-            <div className="highlights-grid">
-              {content.about.highlights.map((highlight, index) => (
-                <div key={index} className="highlight-card">
-                  <div className="highlight-icon">{highlight.icon}</div>
-                  <h4>{highlight.title}</h4>
-                  <p>{highlight.description}</p>
-                </div>
-              ))}
-            </div>
-            
-            <div className="skills-section">
-              <h3 className="skills-title">Technical Skills</h3>
-              <div className="skills-grid">
-                {content.about.skills.categories.map((category, index) => (
-                  <div key={index} className="skill-category">
-                    <h4>{category.title}</h4>
-                    <div className="skill-tags">
-                      {category.skills.map((skill, skillIndex) => (
-                        <span key={skillIndex} className="skill-tag">{skill}</span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Projects Section */}
       <section className="projects-section" id="projects">
@@ -189,7 +154,7 @@ export default function Home() {
       <section className="contact-section" id="contact">
         <div className="container">
           <h2 className="section-title">Get In Touch</h2>
-          <p className="section-subtitle">{content.about.contact.description}</p>
+          <p className="section-subtitle">{content.contact.description}</p>
           
           <div className="contact-content">
             <div className="contact-info">
@@ -197,7 +162,7 @@ export default function Home() {
                 <div className="contact-icon">📧</div>
                 <div className="contact-details">
                   <h4>Email</h4>
-                  <a href={`mailto:${content.about.contact.email}`}>{content.about.contact.email}</a>
+                  <a href={`mailto:${content.contact.info.email}`}>{content.contact.info.email}</a>
                 </div>
               </div>
               
@@ -205,7 +170,7 @@ export default function Home() {
                 <div className="contact-icon">📍</div>
                 <div className="contact-details">
                   <h4>Location</h4>
-                  <p>{content.about.profile.location}</p>
+                  <p>{content.contact.info.location}</p>
                 </div>
               </div>
               
