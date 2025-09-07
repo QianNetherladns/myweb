@@ -7,10 +7,6 @@
         "link": "/"
       },
       {
-        "text": "About",
-        "link": "/about"
-      },
-      {
         "text": "Projects",
         "link": "/projects"
       }

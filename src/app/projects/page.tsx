@@ -61,59 +61,52 @@ export default function Projects() {
         </nav>
       </header>
 
-      <section className="projects-page" id="projects" style={{ paddingTop: "100px", minHeight: "100vh" }}>
-        <div className="projects-header">
-          <h1>{content.projects.title}</h1>
-          <p>{content.projects.subtitle}</p>
-        </div>
-        <div className="projects-showcase">
-          {content.projects.items.map((project, index) => (
-            <div key={index} className="project-card">
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-                <div className="external-link">
-                  <a href={project.site} target="_blank" rel="noopener noreferrer">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div className="project-info">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="project-technologies">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="tech-tag">{tech}</span>
-                  ))}
-                </div>
-                {(project.showLinks || project.showVideo) && (
-                  <div className="project-links">
-                    {project.showLinks && (
-                      <>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link github-link">
-                          <i className="fab fa-github"></i>
-                          <span>View Code</span>
-                        </a>
-                        {project.showLiveDemo && (
-                          <a href={project.site} target="_blank" rel="noopener noreferrer" className="project-link live-link">
-                            <i className="fas fa-external-link-alt"></i>
-                            <span>Live Demo</span>
-                          </a>
-                        )}
-                      </>
-                    )}
-                    {project.showVideo && (
-                      <a href={project.video} target="_blank" rel="noopener noreferrer" className="project-link video-link">
-                        <i className="fab fa-youtube"></i>
-                        <span>Watch Video</span>
-                      </a>
-                    )}
+      <section className="projects-section" id="projects" style={{ paddingTop: "100px", minHeight: "100vh" }}>
+        <div className="container">
+          <h2 className="section-title">My Projects</h2>
+          <p className="section-subtitle">{content.projects.subtitle}</p>
+          
+          <div className="projects-grid">
+            {content.projects.items.map((project, index) => (
+              <div key={index} className="project-card">
+                <div className="project-image">
+                  <img src={project.image} alt={project.title} />
+                  <div className="project-overlay">
+                    <a href={project.site} target="_blank" rel="noopener noreferrer" className="project-link">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </a>
                   </div>
-                )}
+                </div>
+                <div className="project-content">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className="project-technologies">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span key={techIndex} className="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+                  {(project.showLinks || project.showVideo) && (
+                    <div className="project-actions">
+                      {project.showLinks && (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="action-btn github-btn">
+                          <i className="fab fa-github"></i>
+                          <span>Code</span>
+                        </a>
+                      )}
+                      {project.showVideo && (
+                        <a href={project.video} target="_blank" rel="noopener noreferrer" className="action-btn video-btn">
+                          <i className="fab fa-youtube"></i>
+                          <span>Video</span>
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </>
