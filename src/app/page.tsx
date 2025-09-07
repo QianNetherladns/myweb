@@ -90,7 +90,6 @@ export default function Home() {
               {/* 嵌套六边形结构 - 同心圆排列 */}
               <div className="hexagon-layer hexagon-1"></div>
               <div className="hexagon-layer hexagon-2"></div>
-              <div className="hexagon-layer hexagon-3"></div>
               <div className="hexagon-layer hexagon-4"></div>
               <div className="hexagon-layer hexagon-5"></div>
               
