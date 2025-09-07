@@ -107,30 +107,10 @@ export default function Projects() {
                 <article key={index} className="project-card">
                   <div className="project-image-container">
                     <img src={project.image} alt={project.title} className="project-image" />
-                    <div className="project-overlay">
-                      <div className="overlay-content">
-                        <a href={project.site} target="_blank" rel="noopener noreferrer" className="project-link">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
-                          <span>View Project</span>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="project-category">
-                      <span className="category-tag">Data Science</span>
-                    </div>
                   </div>
                   
                   <div className="project-content">
-                    <div className="project-header">
-                      <h3 className="project-title">{project.title}</h3>
-                      <div className="project-status">
-                        <div className="status-indicator"></div>
-                        <span className="status-text">Active</span>
-                      </div>
-                    </div>
-                    
+                    <h3 className="project-title">{project.title}</h3>
                     <p className="project-description">{project.description}</p>
                     
                     <div className="project-technologies">
@@ -139,22 +119,20 @@ export default function Projects() {
                       ))}
                     </div>
                     
-                    {(project.showLinks || project.showVideo) && (
-                      <div className="project-actions">
-                        {project.showLinks && (
-                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="action-button github-button">
-                            <i className="fab fa-github"></i>
-                            <span>Code</span>
-                          </a>
-                        )}
-                        {project.showVideo && (
-                          <a href={project.video} target="_blank" rel="noopener noreferrer" className="action-button video-button">
-                            <i className="fab fa-youtube"></i>
-                            <span>Demo</span>
-                          </a>
-                        )}
-                      </div>
-                    )}
+                    <div className="project-actions">
+                      {project.showLinks && (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="action-button github-button">
+                          <i className="fab fa-github"></i>
+                          <span>Code</span>
+                        </a>
+                      )}
+                      {project.showVideo && (
+                        <a href={project.video} target="_blank" rel="noopener noreferrer" className="action-button video-button">
+                          <i className="fab fa-youtube"></i>
+                          <span>Demo</span>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </article>
               ))}
