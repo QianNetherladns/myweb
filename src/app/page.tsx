@@ -61,7 +61,7 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Hero Section Only */}
+      {/* ONLY Hero Section - NO OTHER CONTENT */}
       <section className="hero" id="home">
         <div className="hero-content">
           <div className="hero-text">
@@ -86,14 +86,11 @@ export default function Home() {
           </div>
           <div className="hero-visual">
             <div className="hero-hexagon">
-              {/* 嵌套六边形结构 - 同心圆排列 */}
               <div className="hexagon-layer hexagon-1"></div>
               <div className="hexagon-layer hexagon-2"></div>
               <div className="hexagon-layer hexagon-3"></div>
               <div className="hexagon-layer hexagon-4"></div>
               <div className="hexagon-layer hexagon-5"></div>
-              
-              {/* 三条对角线 */}
               <div className="diagonal-line diagonal-1"></div>
               <div className="diagonal-line diagonal-2"></div>
               <div className="diagonal-line diagonal-3"></div>
@@ -101,6 +98,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* NO OTHER SECTIONS - NO PROJECTS - NO CONTACT - NO GET IN TOUCH */}
     </>
   );
 }
