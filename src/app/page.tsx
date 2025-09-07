@@ -71,14 +71,21 @@ export default function Home() {
             <p className="hero-description">{content.hero.description}</p>
             <div className="hero-buttons">
               <a href={content.hero.buttons.projects.link} className="btn btn-primary">{content.hero.buttons.projects.text}</a>
-              <a href={content.hero.buttons.contact.link} className="btn btn-secondary">{content.hero.buttons.contact.text}</a>
             </div>
-            <div className="hero-social">
-              {content.contact.social.map((social, index) => (
-                <a key={index} href={social.link} target="_blank" rel="noopener noreferrer">
-                  <img src={`/images/${social.icon}.svg`} alt={social.name} />
-                </a>
-              ))}
+            <div className="hero-info">
+              <div className="base-info">
+                <span className="base-text">📍 Based in Tilburg, Netherlands</span>
+              </div>
+              <div className="follow-me">
+                <span className="follow-text">Follow Me</span>
+                <div className="hero-social">
+                  {content.contact.social.map((social, index) => (
+                    <a key={index} href={social.link} target="_blank" rel="noopener noreferrer">
+                      <img src={`/images/${social.icon}.svg`} alt={social.name} />
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
           <div className="hero-visual">
@@ -153,7 +160,7 @@ export default function Home() {
       {/* Contact Section */}
       <section className="contact-section" id="contact">
         <div className="container">
-          <h2 className="section-title">Get In Touch</h2>
+          <h2 className="section-title">Contact Me</h2>
           <p className="section-subtitle">{content.contact.description}</p>
           
           <div className="contact-content">
@@ -174,16 +181,6 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="social-links">
-                <h4>Follow Me</h4>
-                <div className="social-icons">
-                  {content.contact.social.map((social, index) => (
-                    <a key={index} href={social.link} target="_blank" rel="noopener noreferrer" className="social-link">
-                      <img src={`/images/${social.icon}.svg`} alt={social.name} />
-                    </a>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </div>
