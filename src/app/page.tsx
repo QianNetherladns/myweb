@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
+import { useEffect } from 'react';
 import content from '../config/content.json';
 
 export default function Home() {
@@ -62,7 +61,7 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Hero Section */}
+      {/* Hero Section Only */}
       <section className="hero" id="home">
         <div className="hero-content">
           <div className="hero-text">
@@ -90,6 +89,7 @@ export default function Home() {
               {/* 嵌套六边形结构 - 同心圆排列 */}
               <div className="hexagon-layer hexagon-1"></div>
               <div className="hexagon-layer hexagon-2"></div>
+              <div className="hexagon-layer hexagon-3"></div>
               <div className="hexagon-layer hexagon-4"></div>
               <div className="hexagon-layer hexagon-5"></div>
               
@@ -101,9 +101,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
-
     </>
   );
-} 
+}
