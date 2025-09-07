@@ -61,68 +61,117 @@ export default function Projects() {
         </nav>
       </header>
 
-      {/* Hero Section */}
-      <section className="projects-hero">
-        <div className="container">
-          <div className="projects-hero-content">
-            <h1 className="projects-hero-title">My Projects</h1>
-            <p className="projects-hero-subtitle">{content.projects.subtitle}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Grid */}
-      <section className="projects-showcase">
-        <div className="container">
-          <div className="projects-grid-modern">
-            {content.projects.items.map((project, index) => (
-              <div key={index} className="project-card-modern">
-                <div className="project-image-modern">
-                  <img src={project.image} alt={project.title} />
-                  <div className="project-overlay-modern">
-                    <a href={project.site} target="_blank" rel="noopener noreferrer" className="project-link-modern">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </a>
-                  </div>
+      {/* Main Content Wrapper */}
+      <main className="projects-page-wrapper">
+        {/* Hero Section */}
+        <section className="projects-hero-section">
+          <div className="projects-container">
+            <div className="projects-hero-content">
+              <div className="hero-badge">
+                <span className="badge-text">Portfolio</span>
+              </div>
+              <h1 className="projects-hero-title">My Projects</h1>
+              <p className="projects-hero-subtitle">{content.projects.subtitle}</p>
+              <div className="hero-stats">
+                <div className="stat-item">
+                  <span className="stat-number">{content.projects.items.length}</span>
+                  <span className="stat-label">Projects</span>
                 </div>
-                <div className="project-content-modern">
-                  <div className="project-header">
-                    <h3 className="project-title-modern">{project.title}</h3>
-                    <div className="project-status">
-                      <span className="status-dot"></span>
-                      <span className="status-text">Active</span>
-                    </div>
-                  </div>
-                  <p className="project-description-modern">{project.description}</p>
-                  <div className="project-technologies-modern">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="tech-tag-modern">{tech}</span>
-                    ))}
-                  </div>
-                  {(project.showLinks || project.showVideo) && (
-                    <div className="project-actions-modern">
-                      {project.showLinks && (
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="action-btn-modern github-btn-modern">
-                          <i className="fab fa-github"></i>
-                          <span>View Code</span>
-                        </a>
-                      )}
-                      {project.showVideo && (
-                        <a href={project.video} target="_blank" rel="noopener noreferrer" className="action-btn-modern video-btn-modern">
-                          <i className="fab fa-youtube"></i>
-                          <span>Watch Video</span>
-                        </a>
-                      )}
-                    </div>
-                  )}
+                <div className="stat-item">
+                  <span className="stat-number">4</span>
+                  <span className="stat-label">Technologies</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-number">100%</span>
+                  <span className="stat-label">Quality</span>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Projects Showcase */}
+        <section className="projects-showcase-section">
+          <div className="projects-container">
+            <div className="section-header">
+              <h2 className="section-title">Featured Work</h2>
+              <p className="section-subtitle">Explore my latest projects and technical implementations</p>
+            </div>
+            
+            <div className="projects-grid-container">
+              {content.projects.items.map((project, index) => (
+                <article key={index} className="project-card">
+                  <div className="project-image-container">
+                    <img src={project.image} alt={project.title} className="project-image" />
+                    <div className="project-overlay">
+                      <div className="overlay-content">
+                        <a href={project.site} target="_blank" rel="noopener noreferrer" className="project-link">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                          <span>View Project</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div className="project-category">
+                      <span className="category-tag">Data Science</span>
+                    </div>
+                  </div>
+                  
+                  <div className="project-content">
+                    <div className="project-header">
+                      <h3 className="project-title">{project.title}</h3>
+                      <div className="project-status">
+                        <div className="status-indicator"></div>
+                        <span className="status-text">Active</span>
+                      </div>
+                    </div>
+                    
+                    <p className="project-description">{project.description}</p>
+                    
+                    <div className="project-technologies">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span key={techIndex} className="tech-tag">{tech}</span>
+                      ))}
+                    </div>
+                    
+                    {(project.showLinks || project.showVideo) && (
+                      <div className="project-actions">
+                        {project.showLinks && (
+                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="action-button github-button">
+                            <i className="fab fa-github"></i>
+                            <span>Code</span>
+                          </a>
+                        )}
+                        {project.showVideo && (
+                          <a href={project.video} target="_blank" rel="noopener noreferrer" className="action-button video-button">
+                            <i className="fab fa-youtube"></i>
+                            <span>Demo</span>
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action Section */}
+        <section className="projects-cta-section">
+          <div className="projects-container">
+            <div className="cta-content">
+              <h2 className="cta-title">Interested in Working Together?</h2>
+              <p className="cta-subtitle">Let's discuss your next project and how I can help bring your ideas to life.</p>
+              <div className="cta-actions">
+                <a href="#contact" className="cta-button primary">Get In Touch</a>
+                <a href="/" className="cta-button secondary">View Homepage</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   );
 }
