@@ -118,9 +118,9 @@
     "subtitle": "Welcome to my project portfolio! Here you’ll find a selection of my work across Azure, DBT, Power BI, and Machine Learning. These projects reflect my passion for data — from building scalable pipelines in the cloud, to transforming raw data into reporting-ready models, to creating intuitive dashboards that drive decision-making..",
     "items": [
       {
-        "title": "Azure Data Pipeline",
-        "description": "Built a comprehensive end-to-end data pipeline using Azure Data Factory to process and analyze COVID-19 data. Implemented data ingestion, transformation, and storage solutions with automated monitoring and error handling.",
-        "technologies": ["Azure Data Factory", "Azure DevOps", "Azure Data Lake", "Azure Blob Storage", "Key Vault"],
+        "title": "Azure Data Factory: End-to-End COVID-19 Analytics",
+        "description": "Built comprehensive data pipeline using Azure Data Factory, processing 10M+ records from multiple global health data sources. Implemented advanced transformation logic and automated CI/CD deployment using YAML and PowerShell, demonstrating enterprise-scale data engineering capabilities.",
+        "technologies": ["Azure Data Factory", "Azure DevOps", "CI/CD", "Git", "Azure Data Lake", "Azure Blob Storage", "Key Vault"],
         "github": "",
         "site": "",
         "image": "/images/project-2-cover.jpg",
@@ -128,8 +128,8 @@
         "showLiveDemo": false
       },
       {
-        "title": "DBT Analytics Platform",
-        "description": "Developed a robust analytics platform using DBT to transform raw Airbnb data into clean, reusable data marts. Implemented layered modeling architecture with automated testing and documentation.",
+        "title": "Airbnb Market Analysis using DBT & Snowflake",
+        "description": "Developed layered data modeling architecture transforming raw accommodation data into clean, reusable data marts. Applied advanced DBT features for automated testing and documentation, creating scalable analytics foundation for cross-functional business intelligence.",
         "technologies": ["DBT", "SQL", "Data Modeling", "Analytics", "Snowflake"],
         "github": "",
         "site": "",
@@ -140,7 +140,7 @@
       {
         "title": "Power BI Dashboard",
         "description": "Created interactive business intelligence dashboards with advanced data visualization techniques. Designed user-friendly interfaces for data exploration and decision-making support.",
-        "technologies": ["Power BI", "Data Visualization", "Dashboard Design", "Business Intelligence"],
+        "technologies": ["Power BI", "Data Visualization", "Dashboard Design", "Business Intelligence","DAX","Power Query"],
         "github": "",
         "site": "",
         "image": "/images/project-4-cover.jpg",
@@ -150,11 +150,11 @@
         "showLiveDemo": false
       },
       {
-        "title": "ML Sentiment Analysis",
+        "title": "Machine Learning Project on NLP",
         "description": "Developed machine learning models for sentiment analysis and stance detection using advanced NLP techniques. Implemented data preprocessing, feature engineering, and model evaluation pipelines.",
-        "technologies": ["Python", "Scikit-learn", "TensorFlow", "Pandas", "NumPy", "Jupyter"],
-        "github": "https://github.com/QianNetherladns/ml-sentiment-analysis",
-        "site": "https://github.com/QianNetherladns/ml-sentiment-analysis",
+        "technologies": ["Python", "Scikit-learn", "TensorFlow", "Pandas", "NumPy", "Jupyter","NLP"],
+        "github": "https://github.com/QianNetherladns/MachineLearningProjectNLP",
+        "site": "https://github.com/QianNetherladns/MachineLearningProjectNLP",
         "image": "/images/machine.png",
         "showLinks": true,
         "showLiveDemo": false

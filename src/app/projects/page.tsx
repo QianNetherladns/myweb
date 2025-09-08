@@ -71,7 +71,8 @@ export default function Projects() {
         <section className="projects-showcase-section">
           <div className="projects-container">
             <div className="section-header">
-              <h2 className="section-title">This helps potential clients or employers understand your capabilities.</h2>
+              <h2 className="section-title">My Projects</h2>
+              <p className="section-description">A curated set of my work across Azure data engineering, DBT & Snowflake modeling, interactive Power BI dashboards, and machine learning for NLP. These projects highlight how I build reliable pipelines, model data for analytics, visualize insights, and ship production‑ready ML solutions end‑to‑end.</p>
             </div>
             
             <div className="projects-grid-container">
@@ -79,34 +80,11 @@ export default function Projects() {
                 <article key={index} className="project-card">
                   <div className="project-image-container">
                     <img src={project.image} alt={project.title} className="project-image" />
-                    <div className="project-overlay">
-                      <div className="overlay-content">
-                        <div className="project-category">
-                          <span className="category-tag">Data Project</span>
-                        </div>
-                        <div className="project-link">
-                          {project.showLinks && (
-                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-action-btn">
-                              <i className="fas fa-code"></i>
-                            </a>
-                          )}
-                          {project.showVideo && (
-                            <a href={project.video} target="_blank" rel="noopener noreferrer" className="project-action-btn">
-                              <i className="fas fa-play"></i>
-                            </a>
-                          )}
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   
                   <div className="project-content">
                     <div className="project-header">
                       <h3 className="project-title">{project.title}</h3>
-                      <div className="project-status">
-                        <div className="status-indicator"></div>
-                        <span className="status-text">Completed</span>
-                      </div>
                     </div>
                     
                     <p className="project-description">{project.description}</p>
@@ -116,6 +94,23 @@ export default function Projects() {
                         <span key={techIndex} className="tech-tag">{tech}</span>
                       ))}
                     </div>
+
+                    {(project.showLinks || project.showVideo) && (
+                      <div className="project-actions">
+                        {project.showVideo && (
+                          <a href={project.video} target="_blank" rel="noopener noreferrer" className="action-button video-button">
+                            <i className="fab fa-youtube"></i>
+                            <span>{project.title.toLowerCase().includes('power bi') ? 'Watch Video' : 'Watch Demo'}</span>
+                          </a>
+                        )}
+                        {project.showLinks && (
+                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="action-button github-button">
+                            <i className="fab fa-github"></i>
+                            <span>View Code</span>
+                          </a>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </article>
               ))}

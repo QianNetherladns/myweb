@@ -1291,12 +1291,12 @@ header {
 
 /* PROJECT CARD STYLES - EXACTLY LIKE IMAGE */
 body.projects-page .project-card {
-  background: #ffffff !important;
-  border-radius: 8px !important;
+  background: #121417 !important;
+  border-radius: 12px !important;
   overflow: hidden !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
-  transition: all 0.3s ease !important;
-  border: 1px solid #e9ecef !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
   position: relative !important;
   display: flex !important;
   flex-direction: column !important;
@@ -1304,9 +1304,9 @@ body.projects-page .project-card {
 }
 
 body.projects-page .project-card:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-  border-color: #007bff !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45) !important;
+  border-color: rgba(59,130,246,0.35) !important;
 }
 
 body.projects-page .project-image-container {
@@ -1336,14 +1336,14 @@ body.projects-page .project-content {
 
 body.projects-page .project-title {
   font-size: 1.25rem !important;
-  font-weight: 600 !important;
-  color: #212529 !important;
+  font-weight: 700 !important;
+  color: #e6eaf0 !important;
   margin: 0 0 0.75rem 0 !important;
   line-height: 1.3 !important;
 }
 
 .project-description {
-  color: #6c757d;
+  color: #c9ced6;
   line-height: 1.4;
   margin-bottom: 1rem;
   font-size: 0.9rem;
@@ -1384,8 +1384,8 @@ body.projects-page .project-title {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.85rem;
@@ -1394,29 +1394,31 @@ body.projects-page .project-title {
 }
 
 .github-button {
-  background: #6c757d;
-  color: white;
-  border-color: #6c757d;
+  background: #0f172a;
+  color: #e2e8f0;
+  border-color: #0f172a;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.35);
 }
 
 .github-button:hover {
-  background: #5a6268;
-  border-color: #5a6268;
+  background: #111827;
+  border-color: #111827;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.45);
 }
 
 .video-button {
-  background: #dc3545;
-  color: white;
-  border-color: #dc3545;
+  background: #dc2626;
+  color: #fff;
+  border-color: #dc2626;
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.35);
 }
 
 .video-button:hover {
-  background: #c82333;
-  border-color: #c82333;
+  background: #b91c1c;
+  border-color: #b91c1c;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+  box-shadow: 0 8px 24px rgba(185, 28, 28, 0.45);
 }
 
 /* Projects Grid - 2x2 LAYOUT */
@@ -2991,6 +2993,54 @@ h1 span {
 /* --------------------------------------------------------------------- */
 /* Blogs section CSS starts here  */
 
+/* ===== FINAL OVERRIDES FOR PROJECTS PAGE (to kill any conflicts) ===== */
+body.projects-page .projects-showcase-section .project-card {
+  background: #2b2b2b !important; /* neutral light black, no blue cast */
+  background-image: none !important;
+  background-color: #2b2b2b !important;
+  border-radius: 14px !important;
+  border: 1px dashed rgba(255,255,255,0.38) !important; /* white dashed edge */
+  outline: none !important; /* ensure dashed is on edge */
+  min-height: 460px !important; /* enforce rectangular at wide screens */
+}
+
+@media (max-width: 1440px) {
+  body.projects-page .projects-showcase-section .project-card {
+    min-height: 440px !important;
+  }
+}
+
+body.projects-page .projects-showcase-section .project-image-container {
+  height: 240px !important; /* taller banner */
+  background: #0e1113 !important;
+}
+
+/* Blue skill tags - light blue fill + dashed blue border + blue text */
+body.projects-page .projects-showcase-section .tech-tag {
+  background: rgba(59,130,246,0.08) !important; /* softer blue background */
+  color: #2f6bd3 !important; /* softer blue text */
+  padding: 0.35rem 0.7rem !important;
+  border-radius: 999px !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  border: 1px solid rgba(59,130,246,0.5) !important; /* softer solid border */
+}
+
+body.projects-page .projects-showcase-section .tech-tag:hover {
+  background: rgba(59,130,246,0.2) !important;
+  color: #3b82f6 !important;
+  border-color: rgba(59,130,246,0.9) !important;
+}
+
+/* Text colors on dark card */
+body.projects-page .projects-showcase-section .project-title {
+  color: #eaf0f7 !important;
+}
+body.projects-page .projects-showcase-section .project-description {
+  color: #c7d2df !important;
+}
+
+
 .blogs {
   display: flex;
   flex-direction: column;
@@ -3968,15 +4018,37 @@ body.projects-page .cta-content {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 2rem;
+  position: relative; /* enable decorative background */
+  z-index: 1;
 }
 
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #6c757d;
-  margin-bottom: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
   text-align: center;
   line-height: 1.6;
+}
+
+/* Decorative background behind My Projects header */
+.projects-showcase-section .section-header::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(96%, 1100px);
+  height: 140px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(59,130,246,0.18) 0%, rgba(59,130,246,0.0) 70%),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
+  filter: blur(6px);
+  opacity: 0.7;
+  border-radius: 28px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* Removed duplicate .projects-grid-container rules - using body.projects-page specific rules instead */
@@ -3985,33 +4057,34 @@ body.projects-page .cta-content {
 body.projects-page .project-card,
 .projects-page-wrapper .project-card,
 .projects-showcase-section .project-card {
-  background: #ffffff !important;
-  border-radius: 8px !important;
+  background: #1f2733 !important; /* lighter dark */
+  border-radius: 14px !important;
   overflow: hidden !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
-  transition: all 0.3s ease !important;
-  border: 1px solid #e9ecef !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  border: 1px dashed rgba(255,255,255,0.38) !important; /* white dashed on edge */
   position: relative !important;
   display: flex !important;
   flex-direction: column !important;
   height: 100% !important;
+  min-height: 440px !important; /* rectangular proportion */
 }
 
 body.projects-page .project-card:hover,
 .projects-page-wrapper .project-card:hover,
 .projects-showcase-section .project-card:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-  border-color: #007bff !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45) !important;
+  border-color: rgba(59,130,246,0.35) !important;
 }
 
 body.projects-page .project-image-container,
 .projects-page-wrapper .project-image-container,
 .projects-showcase-section .project-image-container {
   position: relative !important;
-  height: 180px !important;
+  height: 220px !important;
   overflow: hidden !important;
-  background: #f8f9fa !important;
+  background: #0e1113 !important;
 }
 
 .project-image {
@@ -4090,7 +4163,7 @@ body.projects-page .project-image-container,
 body.projects-page .project-content,
 .projects-page-wrapper .project-content,
 .projects-showcase-section .project-content {
-  padding: 1.25rem !important;
+  padding: 1.5rem !important;
   flex: 1 !important;
   display: flex !important;
   flex-direction: column !important;
@@ -4099,9 +4172,9 @@ body.projects-page .project-content,
 body.projects-page .project-title,
 .projects-page-wrapper .project-title,
 .projects-showcase-section .project-title {
-  font-size: 1.1rem !important;
-  font-weight: 600 !important;
-  color: #212529 !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  color: #eaf0f7 !important;
   margin: 0 0 0.75rem 0 !important;
   line-height: 1.3 !important;
 }
@@ -4131,7 +4204,7 @@ body.projects-page .project-title,
 }
 
 .project-description {
-  color: #6c757d;
+  color: #c7d2df;
   line-height: 1.4;
   margin-bottom: 1rem;
   font-size: 0.9rem;
@@ -4146,20 +4219,21 @@ body.projects-page .project-title,
 }
 
 .tech-tag {
-  background: #f8f9fa;
-  color: #495057;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  border: 1px solid #e9ecef;
-  transition: all 0.3s ease;
+  background: rgba(59,130,246,0.12);
+  color: #2563eb;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px dashed rgba(59,130,246,0.65);
+  transition: all 0.2s ease;
 }
 
 .tech-tag:hover {
-  background: rgba(59, 130, 246, 0.2);
-  border-color: rgba(59, 130, 246, 0.4);
-  transform: translateY(-2px);
+  background: rgba(59,130,246,0.2);
+  border-color: rgba(59,130,246,0.9);
+  color: #3b82f6;
+  transform: translateY(-1px);
 }
 
 .project-actions {
