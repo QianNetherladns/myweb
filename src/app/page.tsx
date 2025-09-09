@@ -68,7 +68,10 @@ export default function Home() {
             <h1 className="hero-title">Hello, I'm <span className="auto-type">{content.hero.name}</span></h1>
             <p className="hero-subtitle">{content.hero.title}</p>
             <p className="hero-description">{content.hero.description}</p>
-            <div className="hero-info">
+            <div className="hero-buttons" style={{ marginTop: '16px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              <a href="/projects" className="btn btn-primary">View Projects</a>
+            </div>
+            <div className="hero-info" style={{ marginTop: '16px' }}>
               <div className="follow-me">
                 <span className="follow-text">Follow Me</span>
                 <div className="hero-social">
